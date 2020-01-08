@@ -1,0 +1,13 @@
+<h1>doc</h1>
+<form class="" action="/doctors_home/<%=@doctor.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="edit_name">
+  <input type="text" name="edit_specialty">
+  <button type="submit" name="button">Click to update</button>
+</form>
+
+<form class="" action="/doctors_home/<%=@doctor.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+
+  <button type="submit" name="button">Delete Doctor</button>
+</form>

@@ -1,0 +1,17 @@
+<h1>list of doctors</h1>
+
+<% if @doctors.any? %>
+<ul>
+  <% @doctors.sort_by(&:name).each do |doctor| %>
+  <li>
+    <a href="/doctors_home/<%= doctor.id %>">
+      <%=doctor.name %>, Specialty: <%=doctor.specialty %>
+    </a>
+  </li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no Doctors to display</p>
+<% end %>
+
+<a href="/doctors_home/add_doctor">Click here to add a doctor</a>
